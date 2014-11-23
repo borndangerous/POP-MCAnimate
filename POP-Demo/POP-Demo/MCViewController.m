@@ -92,6 +92,7 @@ typedef NS_ENUM (NSInteger, MCControllerAnimationType) {
 }
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)pan {
+    
 	switch (pan.state) {
 		case UIGestureRecognizerStateBegan:
 		case UIGestureRecognizerStateChanged: {
@@ -169,8 +170,7 @@ typedef NS_ENUM (NSInteger, MCControllerAnimationType) {
 }
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [super viewDidLoad];
 
 #ifdef MCANIMATE_SHORTHAND
     NSLog(@"shorthand enabled");
